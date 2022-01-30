@@ -25,4 +25,19 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES  
-    ('Sota', 'Proffit', 3, NULL);
+    ('Sota', 'Proffit', 1, NULL),
+    ('Emily', 'Dokken', 2, 1),
+    ('Chris', 'Piuggi', 3, 2),
+    ('Jasmine', 'Scott', 4, NULL),
+    ('Chris', 'Angalet', 5, 4),
+    ('Ami', 'Pascole', 6, 5),
+    ('Lizelle', 'Gallez', 7, NULL),
+    ('Vinh', 'Nguyen', 8, 7),
+    ('Laryea', 'Smith', 9, NULL),
+    ('Jeremie', 'Harris', 10, 9),
+    ('Kenny', 'Wilson', 11, NULL),
+    ('Bob', 'Stock', 12, 11),
+    ('Dave', 'Miller', 13, 11),
+    ('Jacob', 'Whitney', 6, 5),
+    ('Haley', 'Wallace', 6, 5),
+    ('Lauren', 'Fleury', 8, 7);
