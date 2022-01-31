@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const { getRoles, getDepartments, getEmployees, addDepartment } = require('./utils/roleUtility');
 
 // Prompt inquirer
 const userPrompts = {
@@ -12,21 +13,27 @@ const userPrompts = {
     }
 };
 
-
 // methods to call database for appropriate response
 const responseMethods = {
 
     ViewAllDepartments(){
-        console.log('departments');
+        getDepartments();
     },
     ViewAllRoles(){
-        console.log('roles');
+        getRoles();
+
     },
     ViewAllEmployees(){
-        console.log('employees');
+        getEmployees();
     },
-    AddDepartment(){
-        console.log('addDepartment');
+    async AddDepartment(){
+        const answers = await inquirer.prompt([
+            {
+                type: 'input',
+                name: 'departmentName',
+                message: 'Department name?'
+            }
+        ]).then(answers => addDepartment(answers));
     },
     AddRole(){
         console.log('addRole');
@@ -46,7 +53,7 @@ async function app(){
     if (menuChoice === 'Quit') return;
 
     responseMethods[menuChoice.split(' ').join('')]();
-    app();
+
 };
 
 app();
