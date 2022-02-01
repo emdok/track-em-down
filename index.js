@@ -69,9 +69,9 @@ const responseMethods = {
           message: "What is the salary?",
         },
         {
-          type: "input",
+          type: "input", // MAKE THIS A LIST AND ADD A QUERY
           name: "department",
-          message: "Please enter the department code as a number.",
+          message: "Please enter the department.",
         },
       ])
       .then((answers) => addRole(answers, app));
@@ -90,14 +90,14 @@ const responseMethods = {
           message: "Last name?",
         },
         {
-          type: "input",
-          name: "role",
+          type: "input", // MAKE THIS A LIST AND CREATE A QUERY
+          name: "role", 
           message: "What is their role id?",
         },
         {
-          type: "input",
+          type: "input", // MAKE THIS A LIST AND CREATE A QUERY
           name: "manager",
-          message: "What is their manager's id?",
+          message: "Who is their manager?",
         },
       ])
       .then((answers) => addEmployee(answers, app));
