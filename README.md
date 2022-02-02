@@ -35,6 +35,7 @@ Screenshot of application:
 
 - [MySQL2](https://www.npmjs.com/package/mysql2)
 - [dotenv](https://www.npmjs.com/package/dotenv)
+- [Inquirer](https://www.npmjs.com/package/inquirer)
 
 ## License
 
