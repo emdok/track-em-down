@@ -109,7 +109,10 @@ const responseMethods = {
                 choices: managers,
               },
             ])
-            .then((answers) => addEmployee(answers, app));
+            .then((answers) => {
+              console.log(answers);
+              addEmployee(answers, app)
+            });
         }
       );
     });
