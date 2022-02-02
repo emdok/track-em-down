@@ -82,7 +82,7 @@ const responseMethods = {
   AddEmployee() {
     db.query(`SELECT title AS name, id AS value FROM role`, (err, roles) => {
       db.query(
-        `SELECT CONCAT(first_name,' ', last_name) AS name, manager_id AS value FROM employee`,
+        `SELECT CONCAT(first_name,' ', last_name) AS name, employee.id AS value FROM employee WHERE employee.manager_id IS NULL`,
         (err, managers) => {
           inquirer
             .prompt([
