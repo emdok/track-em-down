@@ -30,7 +30,8 @@ function getEmployees(app) {
   FROM employee
   JOIN role ON role.id = employee.role_id
   JOIN department ON department.id = role.department_id
-  LEFT JOIN employee manager ON employee.manager_id = manager.id`;
+  LEFT JOIN employee manager ON employee.manager_id = manager.id
+  ORDER BY ID`;
   
   db.query(sql, (err, rows) => {
     if (err) {
